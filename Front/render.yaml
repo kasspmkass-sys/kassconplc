@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: kassconbackend
+    runtime: node
+    rootDir: server/kassconbackend
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      # Set these in the Render dashboard — do not hardcode secrets here:
+      # MONGODB_URI, JWT_SECRET, CLIENT_URL, ADMIN_EMAIL, ADMIN_PASSWORD

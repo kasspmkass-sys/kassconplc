@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#153464" />
+
+    <!-- Primary meta -->
+    <meta name="description" content="Grade-1 General Contractor in Addis Ababa, Ethiopia — building construction, civil engineering, roads, energy facilities and infrastructure works." />
+    <meta name="author" content="Kassa & Sons Construction PLC" />
+    <meta name="robots" content="index, follow" />
+    <title>Kassa & Sons Construction PLC | KASCON — Grade-1 Contractor Ethiopia</title>
+
+    <!-- Critical CSS — above-the-fold hero layout only.
+         Keeps the hero stage sized, coloured, and legible before the main
+         stylesheet link is parsed.  Under 2 KB. Full CSS is in index.css. -->
+    <style>
+      :root {
+        --hero-ink: #0b1e33;
+        --hero-ink-rgb: 11 30 51;
+        --accent: #8B1E35;
+        --font-display: "Outfit", system-ui, sans-serif;
+        --header-h: 4rem;
+        --gutter: clamp(1.25rem, 4vw, 2rem);
+      }
+      @media (min-width: 1024px) { :root { --header-h: 4.5rem; } }
+
+      /* Hero stage: full-bleed dark gradient plate shown before stylesheet */
+      .hero-stage {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background:
+          radial-gradient(ellipse 90% 70% at 18% 12%, rgb(21 52 100 / 0.85), transparent 58%),
+          radial-gradient(ellipse 70% 60% at 88% 8%,  rgb(139 30 53 / 0.35),  transparent 52%),
+          linear-gradient(160deg, #0b1e33 0%, #153464 62%, #10305a 100%);
+        background-color: var(--hero-ink);
+      }
+
+      /* Shell: sets hero minimum height so there is no layout shift when
+         the real CSS arrives */
+      .hero-shell {
+        position: relative;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: clamp(32rem, 88svh, 44rem);
+      }
+      @media (min-width: 640px)  { .hero-shell { justify-content: center; min-height: clamp(34rem, 92svh, 52rem); } }
+      @media (min-width: 1024px) { .hero-shell { min-height: clamp(38rem, 94svh, 56rem); } }
+
+      /* Hero content: padded column over the image */
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+        padding-top: calc(var(--header-h) + 1.1rem);
+        padding-bottom: 1.15rem;
+      }
+
+      /* Hero headline */
+      .hero-title {
+        font-family: var(--font-display);
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -0.035em;
+        line-height: 1.06;
+        font-size: clamp(1.9rem, 1.15rem + 4.2vw, 4.15rem);
+        margin-top: 1rem;
+      }
+
+      /* Hero backdrop: fills the stage so the background plate is instant */
+      .hero-visual {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .hero-backdrop {
+        position: absolute;
+        inset: 0;
+      }
+      .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+      /* Static navbar prerender — minimal above-the-fold critical CSS */
+      .site-nav{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--header-h);}
+      .site-nav--over{background:transparent;}
+      .site-nav--solid{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1);}
+      .container-pad{padding-left:var(--gutter);padding-right:var(--gutter);max-width:90rem;margin:0 auto;}
+      .site-nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
+      .site-nav-logo{display:block;width:auto;border-radius:3px;object-fit:contain;}
+      .site-nav-brand-text{display:flex;flex-direction:column;}
+      .site-nav-brand-name{font-family:var(--font-display);font-weight:700;font-size:.9rem;color:#fff;line-height:1.1;}
+      .site-nav-brand-tail{font-size:.7rem;color:rgba(255,255,255,.7);line-height:1.1;}
+    </style>
+
+    <!-- seo:start -->
+    <!-- Canonical + share metadata. Managed by scripts/seo-build.mjs so every
+         absolute URL comes from one SITE_URL constant — edit it there (or set
+         the SITE_URL env var) and re-run `npm run gen:seo`. -->
+    <link rel="canonical" href="https://kassconcp.vercel.app/" />
+
+    <!-- Open Graph. og:title/og:description are re-written per route by
+         useSEO once the CMS settings resolve. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kassa & Sons Construction PLC" />
+    <meta property="og:title" content="Kassa & Sons Construction PLC | KASCON — Grade-1 Contractor Ethiopia" />
+    <meta property="og:description" content="Grade-1 General Contractor in Addis Ababa, Ethiopia — building construction, civil engineering, roads, energy facilities and infrastructure works." />
+    <meta property="og:url" content="https://kassconcp.vercel.app/" />
+    <meta property="og:image" content="https://kassconcp.vercel.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kassa &amp; Sons Construction PLC project site in Addis Ababa, Ethiopia" />
+    <meta property="og:locale" content="en_ET" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kassa & Sons Construction PLC | KASCON — Grade-1 Contractor Ethiopia" />
+    <meta name="twitter:description" content="Grade-1 General Contractor in Addis Ababa, Ethiopia — building construction, civil engineering, roads, energy facilities and infrastructure works." />
+    <meta name="twitter:image" content="https://kassconcp.vercel.app/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Kassa &amp; Sons Construction PLC project site in Addis Ababa, Ethiopia" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": [
+            "Organization",
+            "LocalBusiness",
+            "GeneralContractor"
+          ],
+          "@id": "https://kassconcp.vercel.app/#organization",
+          "name": "Kassa & Sons Construction PLC",
+          "alternateName": "KASCON",
+          "url": "https://kassconcp.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://kassconcp.vercel.app/media/cms/logo-8b0fe9ce168e70bc3f6dbfcb66745bbb.jpg",
+            "width": 1161,
+            "height": 912
+          },
+          "image": "https://kassconcp.vercel.app/og-image.jpg",
+          "description": "Grade-1 General Contractor in Addis Ababa, Ethiopia — building construction, civil engineering, roads, energy facilities and infrastructure works.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Gurd Shola, Cheshire Services Ethiopia Building, 3rd Floor",
+            "addressLocality": "Addis Ababa",
+            "addressCountry": "ET"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "telephone": "+251-907-257-134",
+              "email": "kasconpl@gmail.com",
+              "areaServed": "ET",
+              "availableLanguage": [
+                "en"
+              ]
+            }
+          ],
+          "areaServed": "ET",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Construction Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Building Construction"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Real Estate Development"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fuel Station & Depot Construction"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Ready-Mix Concrete Supply"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Quarry & Construction Materials"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural Steel & Metal Works"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Woodwork & Finishing"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 8,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Road & Infrastructure Development"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 9,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Heavy Machinery & Fleet Rental"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kassconcp.vercel.app/#website",
+          "url": "https://kassconcp.vercel.app/",
+          "name": "Kassa & Sons Construction PLC | KASCON — Grade-1 Contractor Ethiopia",
+          "publisher": {
+            "@id": "https://kassconcp.vercel.app/#organization"
+          },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+<!-- seo:end -->
+
+    <!-- Every data request, and most CMS images, are served from the API origin.
+         Warming that TLS handshake up front removes a round trip from the
+         homepage data waterfall. -->
+    <link rel="preconnect" href="https://kassconbackend.onrender.com" crossorigin />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <!-- logo-preload:start -->
+    <link rel="preload" as="image" href="/media/cms/logo-8b0fe9ce168e70bc3f6dbfcb66745bbb-sm.webp" type="image/webp" fetchpriority="low">
+<!-- logo-preload:end -->
+    <!-- hero-preload:start -->
+    <!-- Preload the hero backdrop (the LCP element). Regenerated by
+         npm run gen:hero — keep in step with src/generated/heroAssets.js. -->
+    <link rel="preload" as="image" fetchpriority="high"
+          imagesrcset="/media/home/hero/hero-480.avif 480w, /media/home/hero/hero-768.avif 768w, /media/home/hero/hero-1024.avif 1024w, /media/home/hero/hero-1280.avif 1280w, /media/home/hero/hero-1600.avif 1600w, /media/home/hero/hero-1920.avif 1920w"
+          imagesizes="100vw" />
+<!-- hero-preload:end -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "kascon-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed/seed.js",
+    "seed:testimonials": "node src/seed/seedTestimonials.js",
+    "media:migrate": "node src/scripts/migrateUploads.js",
+    "media:migrate:apply": "node src/scripts/migrateUploads.js --apply",
+    "repair:projects": "node src/scripts/repairProjectImages.js",
+    "repair:projects:apply": "node src/scripts/repairProjectImages.js --apply",
+    "cms:pages": "node src/scripts/seedPageContent.js",
+    "cms:pages:apply": "node src/scripts/seedPageContent.js --apply",
+    "repair:equipment": "node src/scripts/fixEquipmentData.js",
+    "repair:equipment:apply": "node src/scripts/fixEquipmentData.js --apply"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.0",
+    "express-rate-limit": "^8.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.0",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.20.2"
+  },
+  "devDependencies": {
+    "@types/pdfkit": "^0.17.6"
+  }
+}

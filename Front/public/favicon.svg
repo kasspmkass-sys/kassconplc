@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#0B1E33"/>
+  <path d="M32 8 L52 20 L52 44 L32 56 L12 44 L12 20 Z" fill="#1558B0" stroke="#F2C9A8" stroke-width="2"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="#fff">KS</text>
+</svg>

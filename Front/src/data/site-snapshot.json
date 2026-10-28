@@ -1,0 +1,32 @@
+{
+  "_comment": "This file is the prerender fallback snapshot. Commit it. Never delete it. Regenerate with: node scripts/prerender.mjs --update-snapshot",
+  "_generated": "2026-10-27T17:04:21.366Z",
+  "_source": "live-api",
+  "heroHeadline": "The Result Of Unity",
+  "heroSubline": "Delivering landmark buildings, energy facilities and civil works with disciplined HSEQ and proven programme control.",
+  "logoUrl": "https://kassconbackend.onrender.com/api/media/6aaa40c761fd35b530f276a3",
+  "logoSize": 38,
+  "companyName": "Kassa & Sons Construction PLC",
+  "companyDescription": "Kassa & Sons Construction PLC (KASCON) is a Grade-One General Contractor delivering building construction, infrastructure, road development, fuel station and depot construction, structural works, construction materials, equipment services, and real estate development. With decades of industry experience, KASCON combines established construction expertise with modern project management, digital systems, and a technology-driven approach to deliver quality, safety, efficiency, and reliable project outcomes.\n\nThe organization holds active Grade–1 General Contractor status in Ethiopia and continues to operate under unified family leadership — the same values the founder built the company on, carried through to the current generation of management.",
+  "servicesTitle": "Integrated Construction & Development Capabilities",
+  "servicesSubtitle": "From buildings and infrastructure to industrial facilities, construction materials, equipment services, and real estate development, KASCON delivers integrated solutions across the construction value chain.",
+  "servicesList": [
+    "Building Construction",
+    "Real Estate Development",
+    "Fuel Station & Depot Construction",
+    "Ready-Mix Concrete Supply",
+    "Aggregate Production & Supply",
+    "Structural Steel & Metal Works",
+    "Woodwork & Finishing",
+    "Road & Infrastructure Development",
+    "Heavy Machinery & Fleet Rental"
+  ],
+  "logoLocalPath": "/media/cms/logo-8b0fe9ce168e70bc3f6dbfcb66745bbb.jpg",
+  "logoWidth": 1161,
+  "logoHeight": 912,
+  "logoSmallPath": "/media/cms/logo-8b0fe9ce168e70bc3f6dbfcb66745bbb-sm.webp",
+  "logoSmallWidth": 160,
+  "logoSmallHeight": 126,
+  "logoSmallSize": 5494,
+  "heroSlideLocalPaths": []
+}

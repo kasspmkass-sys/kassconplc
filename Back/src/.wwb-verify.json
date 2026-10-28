@@ -1,0 +1,13 @@
+{
+  "testUrl": "https://kassconbackend.onrender.com/api/media/6aaaec34d2ce7f9972bef498",
+  "recordImages": {
+    "Mixed-Use": "https://kassconbackend.onrender.com/api/media/6aaaec34d2ce7f9972bef498",
+    "Residential": "https://kassconbackend.onrender.com/api/media/6aaaec34d2ce7f9972bef498",
+    "Fuel Station": "",
+    "Infrastructure": "",
+    "Commercial": "",
+    "Aviation": "",
+    "Industrial": "",
+    "Other": ""
+  }
+}
